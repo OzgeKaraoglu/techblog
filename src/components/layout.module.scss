@@ -2,18 +2,17 @@
     margin: 0 auto;
     padding: 1rem;
     display: flex;
+    background-color: #f5f4f9;
     flex-direction: column;
     min-height: 100vh;
     background-image: url('../../static/images/setup.jpg');
-    height: 500px; /* You must set a specified height */
+    height: 100%; /* You must set a specified height */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
-    background-color: #f5f4f9;
 }
 
 .content {
     flex-grow: 1;
     max-width: 600px;
-    background-color: #f5f4f9;
 }
