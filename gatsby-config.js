@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Tech Blog',
-    author: 'Ozge Karaoglu'
+    title: '<CodeWithOzge />',
+    author: 'Özge Karaoğlu'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -19,6 +19,13 @@ module.exports = {
         name: 'src',
         path:  `${__dirname}/src/`
       }
+    },
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        type: `user-profile`,
+        username: `username`,
+      },
     },
     `gatsby-plugin-sharp`,
     {
