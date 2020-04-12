@@ -4,12 +4,12 @@ module.exports = {
     author: 'Özge Karaoğlu'
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    "gatsby-plugin-react-helmet",
     {
-      resolve: `gatsby-source-contentful`,
+      resolve: "gatsby-source-contentful",
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+        spaceId: `${process.env.CONTENTFUL_SPACE_ID}`,
+        accessToken: `${process.env.CONTENTFUL_ACCESS_TOKEN}`
       }
     },
     `gatsby-plugin-sass`,
@@ -19,13 +19,6 @@ module.exports = {
         name: 'src',
         path:  `${__dirname}/src/`
       }
-    },
-    {
-      resolve: `gatsby-source-instagram`,
-      options: {
-        type: `user-profile`,
-        username: `username`,
-      },
     },
     `gatsby-plugin-sharp`,
     {
