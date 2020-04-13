@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: '<CodeWithOzge />',
+    title: '<CodeWithMe />',
     author: 'Özge Karaoğlu'
   },
   plugins: [
