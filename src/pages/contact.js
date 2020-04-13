@@ -11,6 +11,7 @@ const ContactPage = () => {
             <h4>The best way to reach me is via
                 <a className={contactStyle.link}
                  href="https://www.instagram.com/ozgewhocodes"> ozgewhocodes</a> on Instagram</h4>
+            <a className={contactStyle.link} href = "mailto: ozgewhocodes@gmail.com">Send Email</a>
         </Layout>
     )
 }
