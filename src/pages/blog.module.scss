@@ -6,15 +6,17 @@
 .post {
     margin: 1rem 0;
     a {
-        background-color: white;
-        color: #000000;
+        color: white;
         display: block;
         padding: 1rem;
         text-decoration: none;
     }
 
     a:hover {
-        background: plum;
+        background: #eab9c9;
+        opacity: 80%;
+        margin-right: 300px;
+        margin-left: 300px;
     }
 
     h2 {

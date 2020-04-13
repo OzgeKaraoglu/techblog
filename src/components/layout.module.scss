@@ -2,17 +2,22 @@
     margin: 0 auto;
     padding: 1rem;
     display: flex;
-    background-color: #f5f4f9;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url('../../static/images/setup.jpg');
-    height: 100%; /* You must set a specified height */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background: url('../../static/images/sky.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
 }
 
 .content {
     flex-grow: 1;
-    max-width: 600px;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    color: white
 }

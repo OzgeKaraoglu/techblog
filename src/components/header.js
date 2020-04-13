@@ -18,7 +18,7 @@ const HeaderPage = () => {
 
     return (
         <header className={headerStyles.header}>
-            <h1><Link className={headerStyles.title} to="/">{data.site.siteMetadata.title}</Link></h1>
+            <h6><Link className={headerStyles.title} to="/">{data.site.siteMetadata.title}</Link></h6>
             <nav>
                 <ul className={headerStyles.navList}>
                     <li><Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to='./'>Home</Link></li>
