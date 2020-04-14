@@ -4,6 +4,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import Layout from '../components/layout'
 import Head from '../components/head'
+import postStyle from './blog.module.scss'
 
 export const query = graphql`
   query($slug: String!) {
@@ -31,10 +32,12 @@ const Blog = (props) => {
 
     return (
         <Layout>
+            <div className={postStyle.post}>
             <Head title={props.data.contentfulBlogPost.title} />
             <h1>{props.data.contentfulBlogPost.title}</h1>
             <p>{props.data.contentfulBlogPost.publishedDate}</p>
             {documentToReactComponents(props.data.contentfulBlogPost.body.json, options)}
+            </div>
         </Layout>
     )
 }

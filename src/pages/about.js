@@ -15,8 +15,20 @@ const AboutPage = () => {
         <p>I started my career early while still was in the university as a Software Engineer </p>
         <img style={{borderRadius: 30}} src={profile}  alt="profile"/>
         <h5>I love listen beautiful songs while coding here is my Spotify Playlist</h5>  
-        <iframe style={{borderRadius: 30}} title="spotify" src="https://open.spotify.com/embed/playlist/7IImK40Rng4pclYflKPLs9" width="380" height="480" frameborder="0" allowtransparency="true" allow="encrypted-media">spotify</iframe>
-        <p className={aboutStyle.link}><Link className={aboutStyle.link} to='/contact'>Want to work with me? Reach out!</Link></p>
+        
+        <iframe 
+            title="spotify"
+            src="https://open.spotify.com/embed/playlist/7IImK40Rng4pclYflKPLs9" 
+            width="420" height="480" 
+            style={{ borderRadius: 30 }}
+            frameborder="0" allowtransparency="true" allow="encrypted-media">
+        </iframe>
+
+
+        <p className={aboutStyle.link}>
+            <Link className={aboutStyle.link} to='/contact'>
+                Want to work with me? Reach out!
+            </Link></p>
         <p>Here is my 
         <a className={aboutStyle.link} href="https://www.linkedin.com/in/karaogluozge/"> Linkedin </a></p>
         </Layout>
