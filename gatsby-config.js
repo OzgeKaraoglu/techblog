@@ -10,6 +10,12 @@ module.exports = {
         trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID || "none"
       }
     },
+    {
+      resolve: `gatsby-plugin-google-adsense`,
+      options: {
+        publisherId: process.env.PUBLISHER_ID || "none"
+      },
+    },
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-contentful",
