@@ -18,7 +18,7 @@ const BlogPage = () => {
               slug
               publishedDate(formatString: "MMMM Do, YYYY")
               image {
-                resize (width: 300, height: 500) {
+                resize (width: 605, height: 353) {
                   src
                 }
               }
@@ -36,7 +36,7 @@ const BlogPage = () => {
                     return (
                         <li key={i} className={blogStyles.post}>
                             <Link to={`/blog/${edge.node.slug}`}>
-                            <img alt={edge.node.title} src={edge.node.image} />
+                            <img alt={edge.node.image.title} src={edge.node.image.resize.src} />
                             <h2>{edge.node.title}</h2>
                             <p>{edge.node.publishedDate}</p>
                             </Link>
