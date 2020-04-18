@@ -17,6 +17,11 @@ const BlogPage = () => {
               title
               slug
               publishedDate(formatString: "MMMM Do, YYYY")
+              image {
+                resize (width: 300, height: 500) {
+                  src
+                }
+              }
             }
           }
         }
@@ -27,10 +32,11 @@ const BlogPage = () => {
         <Layout>
             <Head title="Blog" />
             <ol className={blogStyles.posts}>
-                {data.allContentfulBlogPost.edges.map((edge) => {
+                {data.allContentfulBlogPost.edges.map((edge, i) => {
                     return (
-                        <li className={blogStyles.post}>
+                        <li key={i} className={blogStyles.post}>
                             <Link to={`/blog/${edge.node.slug}`}>
+                            <img alt={edge.node.title} src={edge.node.image} />
                             <h2>{edge.node.title}</h2>
                             <p>{edge.node.publishedDate}</p>
                             </Link>
