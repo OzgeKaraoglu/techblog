@@ -12,7 +12,7 @@ const BlogPage = () => {
     const data = useStaticQuery(graphql` 
     query {
         allContentfulBlogPost (sort: { fields: publishedDate, order:DESC } ) {
-        23  edges {
+          edges {
             node {
               title
               slug
