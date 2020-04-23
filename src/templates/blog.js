@@ -5,11 +5,14 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Layout from '../components/layout'
 import Head from '../components/head'
 import postStyle from './blog.module.scss'
+import { DiscussionEmbed } from "disqus-react"
+
 
 export const query = graphql`
   query($slug: String!) {
       contentfulBlogPost(slug: {eq: $slug }) {
           title
+          slug
           publishedDate(formatString: "MMMM Do, YYYY")
           body {
               json
@@ -17,7 +20,6 @@ export const query = graphql`
       }
   }
 `
-
 const Blog = (props) => {
 
     const options = {
@@ -30,6 +32,11 @@ const Blog = (props) => {
         }
     }
 
+    const disqusConfig = {
+        shortname: process.env.GATSBY_DISQUS_NAME,
+        config: { title: props.data.contentfulBlogPost.title, identifier: props.data.contentfulBlogPost.slug },
+    }
+
     return (
         <Layout className={postStyle.post}>
             <div className={postStyle.post}>
@@ -37,8 +44,11 @@ const Blog = (props) => {
             <h2 className={postStyle.post}>{props.data.contentfulBlogPost.title}</h2>
             <div className={postStyle.post}>{documentToReactComponents(props.data.contentfulBlogPost.body.json, options)}</div>          
             <p className={postStyle.post}>{props.data.contentfulBlogPost.publishedDate}</p>
+            <DiscussionEmbed {...disqusConfig} />
             </div>
+            
         </Layout>
+        
     )
 }
 
