@@ -1,0 +1,33 @@
+.link {
+    text-decoration: none;
+    color: #fcbf1e;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+p {
+    margin: 30;
+    text-align: center;
+    color: white
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+    list-style: none;
+}
+
+.skillElement {
+    /* Display the elements in one line */
+    font-weight: bold;
+    display: inline-block;
+    color: #120136;
+    background-color: #fcbf1e;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
